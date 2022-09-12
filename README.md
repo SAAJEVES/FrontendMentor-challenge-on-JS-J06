@@ -1,6 +1,6 @@
 # Frontend Mentor - Interactive pricing component solution
 
-This is a solution to the [Interactive pricing component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Interactive pricing component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -15,8 +15,6 @@ This is a solution to the [Interactive pricing component challenge on Frontend M
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
-
-
 
 ## Overview
 
@@ -33,11 +31,10 @@ Users should be able to:
 ![](laptopview.png)
 ![](mobileview.png.png)
 
-
 ### Links
 
-- Solution URL: [www.saajevessolutionforthisproject.com](https://your-solution-url.com)
-- Live Site URL: [www.saajeveslivesiteforthisproject.com](https://your-live-site-url.com)
+- Solution URL: [www.saajevessolutionforthisproject.com](https://github.com/SAAJEVES/FrontendMentor-challenge-on-JS-J06)
+- Live Site URL: [www.saajeveslivesiteforthisproject.com](https://saajeves.github.io/FrontendMentor-challenge-on-JS-J06/)
 
 ## My process
 
@@ -47,11 +44,9 @@ Users should be able to:
 - CSS custom properties
 - Grid
 
-
 ### What I learned
+
 I learnt how to customize range and also toggle. Concerning the customise toggle, I came to see the importance of the `label` tag element. And this is my first time of using the `switch` statement and `grid` display in a project.
-
-
 
 ### Continued development
 
@@ -60,15 +55,14 @@ Continued development in `HTML, CSS and JavaScript`.
 ### Useful resources
 
 A lot of resources was helpful not just in this project but from the beginning of my learning of web development.
-- [w3schools](https://www.w3schools.com) 
+
+- [w3schools](https://www.w3schools.com)
 
 - [freecodecamp](https://www.freecodecamp.com)
 
 - [youtube](https://www.youtube.com)
 
 - And lots more. Surely, I will always recommend them days in and days out
-
-
 
 ## Author
 
@@ -77,8 +71,6 @@ A lot of resources was helpful not just in this project but from the beginning o
 - Twitter - [go to my twitter account](https://www.twitter.com/saajeves)
 - LinkedIn - [go to my linkedin account](https://www.linkedin.com/in/samuel-ajagun-020283150)
 
-
 ## Acknowledgments
 
 I would love to acknowledge [a very good friend of mine and mentor](https://github.com/wisdomosara) for his immense contribution on helping me in this project. You are well appreciated.
-
