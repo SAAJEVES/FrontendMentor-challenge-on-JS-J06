@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap');
+
+:root {
+    font-size: 10px;
+    font-weight: 600;
+    font-family: 'Manrope', sans-serif;
+    /* full slider bar */
+    --sCyan: hsl(174, 77%, 80%);
+    /* slider background */
+    --stCyan: hsl(174, 86%, 45%);
+    /* discount background */
+    --lgRed: hsl(14, 92%, 95%);
+    /* discount text */
+    --lRed: hsl(15, 100%, 70%);
+    /* cta text */
+    --pBlue: hsl(226, 100%, 87%);
+    /* pricing component background */
+    --w: hsl(0, 0%, 100%);
+    /* main background */
+    --vpBlue: hsl(230, 100%, 99%);
+    /* empty slider bar */
+    --lgBlue: hsl(224, 65%, 95%);
+    /* toggle background */
+    --lg1Blue: hsl(223, 50%, 87%);
+    /* text */
+    --gBlue: hsl(225, 20%, 60%);
+    /* text(large text or header text) & cta background */
+    --ddBlue: hsl(227, 35%, 25%);
+}
+
+body {
+    color: var(--gBlue);
+    background: url(bg-pattern.svg) var(--vpBlue);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100%;
+}
+
+/* Reset */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+span {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 
+header styling begins
+*/
+header {
+    width: 100%;
+    text-align: center;
+    padding: 70px 0;
+    background: url(pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header-container {
+    width: 100%;
+}
+
+.header-container h1 {
+    font-size: 3.5rem;
+    color: var(--ddBlue);
+    margin-bottom: 10px;
+}
+
+.header-container p {
+    font-size: 1.6rem;
+}
+/* 
+header styling ends
+*/
+
+
+
+/* 
+main styling begins
+*/
+main {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.main-container {
+    width: 38%;
+    margin: 0 auto;
+    background-color: var(--w);
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px  var(--lg1Blue);
+}
+
+/* main-top styling starts */
+.main-top {
+    width: 100%;
+    padding: 45px;
+    border-bottom: 1px solid #d3d3d3;
+    position: relative;
+}
+
+.main-top-grid {
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 50px;
+}
+
+.main-top-grid-top {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.main-top-grid-top-pageviews {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    letter-spacing: .2rem;
+    width: 100%;
+}
+
+.main-top-grid-mid {
+    grid-area: 2 / 1 / 3 /3;
+}
+
+.main-top-grid-mid-slider {
+    width: 100%;
+    height: 7px;
+    background: var(--lgBlue);
+    border-radius: 20px;
+    position: relative;
+}
+
+.custom-slider {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--sCyan);
+    border-radius: 20px;
+}
+
+.slider {
+    appearance: none;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    background: url(icon-slider.svg) var(--stCyan);
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 15px 15px 0px hsl(173, 64%, 76%);
+    cursor: pointer;
+}
+
+.slider:focus::-webkit-slider-thumb {
+    cursor: grabbing;
+    background: url(icon-slider.svg) hsl(174, 65%, 36%);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main-top-grid-bottom {
+    text-align: right;
+    font-size: 1.3rem;
+    grid-area: 1 / 2 / 3 / 3;
+    position: relative;
+}
+
+.main-top-grid-bottom .dollar-amount {
+    font-weight: 800;
+    color: var(--ddBlue);
+    transform: scale(2.5);
+    position: relative;
+    right: 32px;
+}
+
+.main-top-bottom {
+    width: 85%;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.main-top-bottom-text {
+    font-size: 1.2rem;
+    text-align: right;
+}
+
+.custom-check {
+    width: 50px;
+    height: 24px;
+    margin: 0 5px;
+    display: inline-block;
+    position: relative;
+    bottom: 5px;
+}
+
+.check {
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.check-background {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--lg1Blue);
+    border-radius: 24px;
+    transition: 300ms;
+}
+
+.check-background::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 3px;
+    height: 18px;
+    width: 18px;
+    border-radius: 100%;
+    background-color: var(--w);
+    transition: 300ms;
+}
+
+.check:checked + .check-background {
+    background-color: var(--sCyan);
+}
+
+.check:checked + .check-background::before {
+    transform: translateX(22px);
+}
+
+.discount {
+    color: var(--lRed);
+    font-size: 1.1rem;
+    padding: 4px 10px;
+    background-color: var(--lgRed);
+    margin-left: 5px;
+    border-radius: 20px;
+}
+
+/* main-top styling ends */
+
+
+/* main-bottom styling starts */
+.main-bottom {
+    padding: 45px;
+}
+
+.main-bottom-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    
+}
+
+.main-bottom-grid-left {
+    width: 100%;
+}
+
+.main-bottom-grid-left ul {
+    text-align: left;
+}
+
+.main-bottom-grid-left ul li {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.main-bottom-grid-left ul li img {
+    width: 15px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.main-bottom-grid-right {
+    width: 100%;
+}
+
+.main-bottom-grid-right-cta {
+    width: 100%;
+    text-align: right;
+}
+
+.main-bottom-grid-right-cta a {
+    color: var(--pBlue);
+    font-size: 1.3rem;
+    display: inline-block;
+    padding: 10px 40px;
+    border-radius: 50px;
+    margin-left: auto;
+    background-color: var(--ddBlue);
+    transition: 400ms;
+}
+
+.main-bottom-grid-right-cta a:hover {
+    color: var(--w);
+}
+/* main-bottom styling ends */
+
+/* 
+main styling ends
+*/
+
+
+
+/* 
+footer styling begins
+*/
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+ 
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+/* 
+footer styling ends
+*/
+
+/* other screens styling starts  */
+@media screen and (max-width: 1250px) {
+    .main-container {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .main-container {
+        width: 52%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .main-container {
+        width: 59%;
+    }
+
+    .main-top,
+    .main-bottom {
+        padding: 35px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .main-container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .main-container {
+        width: 77%;
+    }
+
+    .main-top,
+    .main-bottom {
+        padding: 25px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    header {
+        padding: 40px 0;
+    }
+
+    .header-container h1 {
+        font-size: 2rem;
+        margin-bottom: 7px;
+    }
+
+    .header-container p {
+        font-size: 1.3rem;
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .main-container {
+        width: 80%;
+    }
+
+    .main-top {
+        padding: 20px;
+    }
+
+    .main-top-grid {
+        display: block;
+    }
+
+    .main-top-grid-top {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .main-top-grid-top-pageviews {
+        font-size: 1.2rem;
+    }
+
+    .main-top-grid-mid {
+        margin-bottom: 35px;
+    }
+
+    .main-top-grid-bottom {
+        text-align: center;
+        font-size: 1.1rem;
+        padding-left: 20px;
+    }
+
+    .main-top-bottom-text {
+        font-size: 1rem;
+    }
+
+    .main-top-bottom {
+        width: 100%;
+        margin: 0;position: relative;
+        left: 10px;
+    }
+
+    .main-bottom {
+        padding: 20px;
+    }
+
+    .main-bottom-grid {
+        display: block;
+    }
+
+    .main-bottom-grid-left {
+        margin-bottom: 15px;
+    }
+
+    .main-bottom-grid-left ul {
+        text-align: center;
+    }
+
+    .main-bottom-grid-left ul li {
+        margin-bottom: 5px;
+        font-size: 1.1rem;
+    }
+
+    .main-bottom-grid-right-cta {
+        text-align: center;
+    }
+
+    .main-bottom-grid-right-cta a {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .main-container {
+        width: 85%;
+    }
+
+}
+
+/* other screens styling ends  */
+
+
+/* 
+mobile styling starts
+*/
+@media screen and (max-width: 375px) {
+    .main-container {
+        width: 90%;
+    }
+
+}
+
+/* 
+mobile styling ends
+*/

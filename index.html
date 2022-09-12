@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Frontend Mentor | Interactive pricing component</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Simple, traffic-based pricing</h1>
+            <p>Sign-up for our 30-day trial. No credit card required. </p>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-container">
+            <div class="main-top">
+                <div class="main-top-grid">
+                    <div class="main-top-grid-top">
+                        <div class="main-top-grid-top-pageviews">
+                            <span class="amount-views">100k</span> pageviews
+                        </div>
+                    </div>
+
+                    <div class="main-top-grid-mid">
+                        <div class="main-top-grid-mid-slider">
+                            <div class="custom-slider"></div>
+                            <input type="range" name="slider" id="slider" class="slider" min="0" max="4" value="2">
+                        </div>
+                    </div>
+
+                    <div class="main-top-grid-bottom">
+                        <span class="dollar-amount">$<span class="amount">16.00</span></span> <span class="month"> / month</span>
+                    </div>
+
+                </div>
+
+                <div class="main-top-bottom">
+                    <div class="main-top-bottom-text">
+                        Monthly Billing
+                        <label class="custom-check">
+                            <input type="checkbox" id="check" class="check">
+                            <span class="check-background"></span>
+                        </label>
+                        Yearly Billing
+                        <span class="discount">25% discount</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-bottom">
+                <div class="main-bottom-grid">
+                    <div class="main-bottom-grid-left">
+                        <ul>
+                            <li>
+                                <img src="icon-check.svg" alt="cehck" class="mark-good"> Unlimited websites
+                            </li>
+                            <li>
+                                <img src="icon-check.svg" alt="cehck" class="mark-good">100% data ownership
+                            </li>
+                            <li>
+                                <img src="icon-check.svg" alt="cehck" class="mark-good">
+                                Email reports
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="main-bottom-grid-right">
+                        <div class="main-bottom-grid-right-cta">
+                            <a href="#" class="link">Start my trial</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="https://github.com/SAAJEVES">SAAJEVES</a>.
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
